@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Final Faceoff | Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/icon.jpg">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+            <img src="img/icon.jpg" alt="Logo_Here" id="logo">
+            <br>
+            <br>
+          <h1><div class="highlight">Final Faceoff</div> Best Against Best</h1>
+        </div>
+        <br>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="players.html">Players</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="showcase">
+      <div class="container">
+        <h1>The Final Clash</h1>
+        Here comes the most awaited and most loved game,Cambrian Legaue Final and the last game.We are about to close this memorable league by a final game.Teams will be declared here once announced.
+      </div>
+    </section>
+
+    <section id="boxes">
+      <div class="container">
+          <h1 id="clubhead">Clubs</h1>
+        <div class="box">
+          <img src="./img/doutre.png">
+          <h3>Doutre F.C.</h3>
+          <p>More Braver and Patient than the lions in their logo.Though their performance was quite poor initially but they won the last season of the  cambrian league 2023. </p>
+        </div>
+        <div class="box">
+          <img src="./img/edwards.png">
+          <h3>Edwards F.C.</h3>
+          <p>The Club can be better pronounced as "legends club".The club is full of playmakers which never let the opponents to take rest.</p>
+        </div>
+        <div class="box">
+          <img src="./img/jodha.png">
+          <h3>Jodha City F.C.</h3>
+          <p>Fought Like A Knight all way but were unable to get a good finish.The Club has reached has finals twice but still longing for their first victory.</p>
+        </div>
+        <div class="box">
+          <img src="./img/mainwaring.png">
+          <h3>Mainwaring United</h3>
+          <p>Mighter than the dragons in their logo.The Club won the first season of Cambrian League 2023.They  Also reached the finals in the second season.</p>
+        </div>
+      </div>
+    </section>
+
+     <footer id="footer">
+         <hr>
+         <div class="footer-top">
+              Stechtic&copy;   
+         </div> 
+         
+          <form id="contact">
+              <h1>Contact Us</h1>
+              <br>
+              Enter Your Name
+              <input type="text" id="name" autocomplete="off" class="contact-input">
+              Enter Your email
+              <input type="email" id="email" autocomplete="off" class="contact-input">
+              Enter your comment/queries
+              <textarea id="comment" autocomplete="off" form="contact" maxlength="50" placeholder="Maximum 50 characters are allowed"></textarea>
+              <button id="saveData">Submit Now</button>              
+          </form>
+          <div id="margin-gap"> 
+          </div>
+          <marquee>Thanks for visiting our website.Stay tuned till our next awesome project :-Stechtic&copy; 2024</marquee>  
+          </div>
+     </footer>
+    <script src="index.js"></script>
+    <script type="module">
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+  import { getDatabase,ref,set,get,child,update,remove} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAZ2xZ3efF6DLIG7Y0ZFQlftllEd6RDXy4",
+    authDomain: "football-96b78.firebaseapp.com",
+    databaseURL: "https://football-96b78-default-rtdb.firebaseio.com",
+    projectId: "football-96b78",
+    storageBucket: "football-96b78.appspot.com",
+    messagingSenderId: "14362604757",
+    appId: "1:14362604757:web:c26c825e19938cd4011e5c"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+  
+  //getting all the values
+  
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  let com = document.getElementById("comment");
+  
+  let saveData = document.getElementById("saveData"); 
+  saveData.addEventListener('click', AddData);
+  
+  function AddData() {
+  event.preventDefault(); 
+      set(ref(db,"finalfaceoff/"+ name.value),{
+          Name:name.value,
+          Email:email.value,
+          Comment:com.value
+      })
+      alert("Feedback shared succesfully");
+      name.value="";
+      email.value="";
+      com.value="";        
+  }
+</script>
+  </body>
+</html>

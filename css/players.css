@@ -1,0 +1,113 @@
+body{
+    background: white;
+}
+
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+#image img{
+    height:9rem;
+    width: 6rem;
+}
+input{
+    width: 63%;
+    margin-left: 1rem;
+    margin-top:1rem ;
+    height: 2rem;
+    font-size:1.5rem;
+}
+button{
+    height: 2rem;
+    font-size:1.2rem;
+}
+.center{
+    text-align:center;
+    margin: 1rem;
+    color: white;
+}
+.box{
+    display:flex;
+    background-color: #2aff8297;
+    padding:1rem 0;
+    margin: 1rem;
+    border-radius: 15px;
+}
+#text{
+    margin:0 13px;
+}
+#name{
+    font-size:1.5rem;
+}
+
+
+/* Footer added */
+footer{
+    background: black;
+    
+    height: 100%;
+    background:#e8491d;
+    margin:0;
+    margin-top:20vh;
+    color:white;
+    font-size:1rem;
+    text-align:left;
+    overflow:hidden;
+    padding:0;
+}
+.footer-top{
+    text-align:center;
+    padding:1vh 1vw;
+    font-weight:bold;
+    font-size:4vw;
+    border-bottom:3px solid purple;
+}
+#contact{
+    width: 30vw;
+    margin:15.7%;
+    text-align:left;
+}
+#contact>h1{
+    text-align:center;
+    margin:2vh auto;
+    font-size:2rem;
+}
+#contact button{
+    padding:0;
+    height:5vh;
+    border-radius: 3vw;
+    background: #0098ffc9;
+    width: 115%;
+    margin:4vh auto;
+}
+.contact-input{
+    display:block;
+    width:100%;
+    margin-bottom:2vh;
+    font-size:2rem;
+    padding: 20px;
+    margin-left:0;
+}
+#comment{
+    height: 10vh;
+    width: 100%;
+    font-size:2rem;
+    padding:20px;
+}
+#margin-gap{
+    border-bottom:3px solid purple;
+    width: 100%;
+    margin:3vh 0;
+    margin-bottom:0;    
+    font-size:1rem;
+}
+marquee{
+    margin: 1vh 0;
+}
+#saveData{
+    font-size:2rem;
+    margin: auto;
+    padding: 20px;
+}
