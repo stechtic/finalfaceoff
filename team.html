@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Revealed | stechtic</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            overflow-x:hidden;
+            font-family: 'Brush Script MT', cursive;
+        }
+        .unrev{
+            font-size:8vh;
+            height:auto;
+            min-height:47vh;
+            width: 90vw;
+            display:block;
+            margin: 2vh auto;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+        .u{
+            font-size:5vh;
+            height:auto;
+            min-height:47vh;
+            max-width: 90vw;
+            padding:1.5vh;
+            display:block;
+            margin: 2vh auto;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background: #aafff5;
+            display:none;
+            overflow:hidden;
+        }
+        
+        #unrev1{
+            background: red;
+            display:non;
+            
+        }
+        
+        #unrev2{
+            background: green;
+            display:non;
+        }
+    </style>
+</head>
+<body>
+         <div id="unrev1" class="unrev" onclick="rev1()">Tap to Reveal <br><br>Team 1</div>
+         <div id="unrev2" class="unrev" onclick="rev2()">Tap to Reveal <br><br>Team 2</div>
+         
+         
+         <div id="t1" class="u">
+             <h1>Team 1</h1>
+             <br>
+             ◆ Pratyush(c)
+             <br>
+             ◆ Akshar
+             <br>
+             ◆ Anjal
+             <br>
+             ◆ Shorya
+             <br>
+             ◆ Krishna
+             <br>
+             ◆ Daksh
+             <br>
+             ◆ Augustya
+             <br>
+             ◆ Abhinav
+             <br>
+             ◆ Shiven
+             <br>
+         </div>
+         
+         <div id="t2" class="u">
+            <h1>Team 2</h1>
+            <br>
+             ◆ Siddhant(c)
+             <br>
+             ◆ Prashant 
+             <br>
+             ◆ Shivam
+             <br>
+             ◆ Abhay
+             <br>
+             ◆ Mittal
+             <br>
+             ◆ Abhishek
+             <br>
+             ◆ Aryan
+             <br>
+             ◆ Adhyan
+             <br>
+             ◆ Ankit
+             <br>
+         </div>
+         
+<script>
+    var r1=document.getElementById("unrev1");
+    var r2=document.getElementById("unrev2");
+    
+    var t1=document.getElementById("t1");
+    var t2=document.getElementById("t2");
+          function rev1() {
+              r1.style.display="none";
+              t1.style.display="block";
+          }  
+          function rev2() {
+              r2.style.display="none";
+              t2.style.display="block";
+          }    
+</script>
+</body>
+</html>
